@@ -1,0 +1,221 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module threetaps.api.clients.geocoderAPIClient</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="threetaps.html"><font color="#ffffff">threetaps</font></a>.<a href="threetaps.api.html"><font color="#ffffff">api</font></a>.<a href="threetaps.api.clients.html"><font color="#ffffff">clients</font></a>.geocoderAPIClient</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/erik/Development/pythonAPIWrapper/threetaps/api/clients/geocoderAPIClient.py">/Users/erik/Development/pythonAPIWrapper/threetaps/api/clients/geocoderAPIClient.py</a></font></td></tr></table>
+    <p><tt>threetaps.api.clients.geocoderAPIClient<br>
+&nbsp;<br>
+This&nbsp;Python&nbsp;module&nbsp;implements&nbsp;the&nbsp;3taps&nbsp;Geocoder&nbsp;API&nbsp;client&nbsp;object&nbsp;and<br>
+related&nbsp;classes.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="simplejson.html">simplejson</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="threetaps.api.base.apiClient.html#APIClient">threetaps.api.base.apiClient.APIClient</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="threetaps.api.clients.geocoderAPIClient.html#GeocoderAPIClient">GeocoderAPIClient</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="threetaps.api.clients.geocoderAPIClient.html#GeocodeRequest">GeocodeRequest</a>
+</font></dt><dt><font face="helvetica, arial"><a href="threetaps.api.clients.geocoderAPIClient.html#GeocodeResponse">GeocodeResponse</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GeocodeRequest">class <strong>GeocodeRequest</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;object&nbsp;encapsulating&nbsp;a&nbsp;single&nbsp;geocoding&nbsp;request&nbsp;to&nbsp;the&nbsp;server.<br>
+&nbsp;<br>
+A&nbsp;GeocoderRequest&nbsp;object&nbsp;has&nbsp;the&nbsp;following&nbsp;attributes:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;latitude<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;latitude&nbsp;of&nbsp;the&nbsp;posting,&nbsp;as&nbsp;a&nbsp;floating-point&nbsp;number&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decimal&nbsp;degrees.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;longitude<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;longitude&nbsp;of&nbsp;the&nbsp;posting,&nbsp;as&nbsp;a&nbsp;floating-point&nbsp;number&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decimal&nbsp;degrees.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;country<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;country.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;state<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;or&nbsp;code&nbsp;for&nbsp;the&nbsp;state&nbsp;or&nbsp;region.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;city<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;city.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;locality<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;a&nbsp;suburb,&nbsp;area&nbsp;or&nbsp;town&nbsp;within&nbsp;the&nbsp;specified&nbsp;city.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;street<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;full&nbsp;street&nbsp;address&nbsp;for&nbsp;this&nbsp;location.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;postal<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;ZIP&nbsp;or&nbsp;postal&nbsp;code&nbsp;for&nbsp;this&nbsp;location.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Freeform&nbsp;text&nbsp;holding&nbsp;a&nbsp;location&nbsp;name&nbsp;or&nbsp;address&nbsp;value.<br>
+&nbsp;<br>
+You&nbsp;can&nbsp;retrieve&nbsp;and&nbsp;change&nbsp;these&nbsp;attributes&nbsp;directly&nbsp;as&nbsp;required.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GeocodeRequest-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><tt>Standard&nbsp;initializer.<br>
+&nbsp;<br>
+The&nbsp;initial&nbsp;attributes&nbsp;for&nbsp;the&nbsp;GeocoderRequest&nbsp;object&nbsp;can&nbsp;be&nbsp;passed<br>
+as&nbsp;keyword&nbsp;arguments&nbsp;if&nbsp;desired.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GeocodeResponse">class <strong>GeocodeResponse</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>An&nbsp;object&nbsp;encapsulating&nbsp;a&nbsp;single&nbsp;geocoding&nbsp;response&nbsp;from&nbsp;the&nbsp;server.<br>
+&nbsp;<br>
+A&nbsp;GeocoderResponse&nbsp;object&nbsp;has&nbsp;the&nbsp;following&nbsp;attributes:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;code<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;3taps&nbsp;location&nbsp;code&nbsp;for&nbsp;this&nbsp;posting,&nbsp;or&nbsp;None&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posting&nbsp;could&nbsp;not&nbsp;be&nbsp;geocoded.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;latitude<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;calculated&nbsp;latitude&nbsp;of&nbsp;the&nbsp;posting,&nbsp;as&nbsp;a&nbsp;floating-point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;in&nbsp;decimal&nbsp;degrees.&nbsp;&nbsp;This&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;None&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;latitude&nbsp;of&nbsp;the&nbsp;posting&nbsp;could&nbsp;not&nbsp;be&nbsp;calculated.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;longitude<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;calculated&nbsp;longitude&nbsp;of&nbsp;the&nbsp;posting,&nbsp;as&nbsp;a&nbsp;floating-point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;in&nbsp;decimal&nbsp;degrees.&nbsp;&nbsp;This&nbsp;will&nbsp;be&nbsp;set&nbsp;to&nbsp;None&nbsp;if&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;longitude&nbsp;of&nbsp;the&nbsp;posting&nbsp;could&nbsp;not&nbsp;be&nbsp;calculated.<br>
+&nbsp;<br>
+You&nbsp;can&nbsp;retrieve&nbsp;and&nbsp;change&nbsp;these&nbsp;attributes&nbsp;directly&nbsp;as&nbsp;required.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GeocodeResponse-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><tt>Standard&nbsp;initializer.<br>
+&nbsp;<br>
+The&nbsp;initial&nbsp;attributes&nbsp;for&nbsp;the&nbsp;GeocoderResponse&nbsp;object&nbsp;can&nbsp;be<br>
+passed&nbsp;as&nbsp;keyword&nbsp;arguments&nbsp;if&nbsp;desired.</tt></dd></dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GeocoderAPIClient">class <strong>GeocoderAPIClient</strong></a>(<a href="threetaps.api.base.apiClient.html#APIClient">threetaps.api.base.apiClient.APIClient</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>A&nbsp;client&nbsp;for&nbsp;the&nbsp;3taps&nbsp;Geocoder&nbsp;API.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GeocoderAPIClient-geocode"><strong>geocode</strong></a>(self, requests, agentID<font color="#909090">=None</font>, authID<font color="#909090">=None</font>)</dt><dd><tt>Ask&nbsp;the&nbsp;geocoder&nbsp;to&nbsp;geocode&nbsp;one&nbsp;or&nbsp;more&nbsp;postings.<br>
+&nbsp;<br>
+The&nbsp;parameters&nbsp;are&nbsp;as&nbsp;follows:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'requests'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;<a href="#GeocodeRequest">GeocodeRequest</a>&nbsp;objects&nbsp;containing&nbsp;the&nbsp;location<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;information&nbsp;for&nbsp;one&nbsp;or&nbsp;more&nbsp;postings.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'agentID'<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;identifying&nbsp;the&nbsp;entity&nbsp;which&nbsp;is&nbsp;sending&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;'authID'<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;which&nbsp;authorizes&nbsp;this&nbsp;entity&nbsp;to&nbsp;make&nbsp;the&nbsp;given<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.<br>
+&nbsp;<br>
+Note&nbsp;that&nbsp;the&nbsp;'agentID'&nbsp;and&nbsp;'authID'&nbsp;values&nbsp;are&nbsp;currently&nbsp;ignored.<br>
+&nbsp;<br>
+Upon&nbsp;completion,&nbsp;we&nbsp;return&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#GeocodeResponse">GeocodeResponse</a>&nbsp;objects,&nbsp;one<br>
+for&nbsp;each&nbsp;entry&nbsp;in&nbsp;the&nbsp;'requests'&nbsp;list.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="threetaps.api.base.apiClient.html#APIClient">threetaps.api.base.apiClient.APIClient</a>:<br>
+<dl><dt><a name="GeocoderAPIClient-__init__"><strong>__init__</strong></a>(self, url<font color="#909090">='http://3taps.net'</font>, port<font color="#909090">=80</font>)</dt><dd><tt>Standard&nbsp;initializer.<br>
+&nbsp;<br>
+The&nbsp;API&nbsp;client&nbsp;will&nbsp;use&nbsp;the&nbsp;given&nbsp;URL&nbsp;and&nbsp;HTTP&nbsp;port&nbsp;to&nbsp;access&nbsp;the<br>
+3taps&nbsp;APIs.</tt></dd></dl>
+
+<dl><dt><a name="GeocoderAPIClient-disableLogging"><strong>disableLogging</strong></a>(self)</dt><dd><tt>Turn&nbsp;off&nbsp;logging&nbsp;of&nbsp;HTTP&nbsp;requests.</tt></dd></dl>
+
+<dl><dt><a name="GeocoderAPIClient-enableLogging"><strong>enableLogging</strong></a>(self)</dt><dd><tt>Turn&nbsp;on&nbsp;logging&nbsp;of&nbsp;HTTP&nbsp;requests.<br>
+&nbsp;<br>
+If&nbsp;this&nbsp;is&nbsp;turned&nbsp;on,&nbsp;information&nbsp;about&nbsp;each&nbsp;HTTP&nbsp;request&nbsp;that&nbsp;is<br>
+made,&nbsp;including&nbsp;the&nbsp;URL,&nbsp;the&nbsp;supplied&nbsp;parameters,&nbsp;and&nbsp;the&nbsp;type&nbsp;of<br>
+response&nbsp;that&nbsp;was&nbsp;received,&nbsp;will&nbsp;be&nbsp;sent&nbsp;to&nbsp;the&nbsp;Python&nbsp;standard<br>
+library's&nbsp;logging&nbsp;module&nbsp;as&nbsp;INFO&nbsp;messages.</tt></dd></dl>
+
+<dl><dt><a name="GeocoderAPIClient-sendRequest"><strong>sendRequest</strong></a>(self, endpoint, type<font color="#909090">='GET'</font>, **params)</dt><dd><tt>Send&nbsp;an&nbsp;HTTP&nbsp;request&nbsp;to&nbsp;the&nbsp;3taps&nbsp;API.<br>
+&nbsp;<br>
+The&nbsp;parameters&nbsp;are&nbsp;as&nbsp;follows:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;endpoint<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;that&nbsp;defines&nbsp;the&nbsp;URL&nbsp;to&nbsp;access,&nbsp;relative&nbsp;to&nbsp;our<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;base&nbsp;URL&nbsp;and&nbsp;HTTP&nbsp;port.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;type<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;type&nbsp;of&nbsp;HTTP&nbsp;request&nbsp;to&nbsp;make.&nbsp;&nbsp;The&nbsp;following&nbsp;values&nbsp;are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;supported:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GET<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POST<br>
+&nbsp;<br>
+The&nbsp;remaining&nbsp;keyword&nbsp;parameters&nbsp;(if&nbsp;any)&nbsp;are&nbsp;passed&nbsp;as&nbsp;query<br>
+parameters&nbsp;to&nbsp;the&nbsp;URL.<br>
+&nbsp;<br>
+Upon&nbsp;completion,&nbsp;we&nbsp;return&nbsp;a&nbsp;dictionary&nbsp;with&nbsp;the&nbsp;following&nbsp;entries:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;HTTP&nbsp;status&nbsp;code&nbsp;returned&nbsp;by&nbsp;the&nbsp;server.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contents<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;unprocessed&nbsp;text&nbsp;returned&nbsp;by&nbsp;the&nbsp;server.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content-type<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;HTTP&nbsp;content-type&nbsp;value&nbsp;returned&nbsp;by&nbsp;the&nbsp;server.<br>
+&nbsp;<br>
+If&nbsp;a&nbsp;connection&nbsp;cannot&nbsp;be&nbsp;made&nbsp;to&nbsp;the&nbsp;server,&nbsp;we&nbsp;return&nbsp;None.</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

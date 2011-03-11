@@ -1,0 +1,155 @@
+
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module threetaps.api.models.posting</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="threetaps.html"><font color="#ffffff">threetaps</font></a>.<a href="threetaps.api.html"><font color="#ffffff">api</font></a>.<a href="threetaps.api.models.html"><font color="#ffffff">models</font></a>.posting</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/erik/Development/pythonAPIWrapper/threetaps/api/models/posting.py">/Users/erik/Development/pythonAPIWrapper/threetaps/api/models/posting.py</a></font></td></tr></table>
+    <p><tt>threetaps.api.models.posting<br>
+&nbsp;<br>
+This&nbsp;Python&nbsp;module&nbsp;implements&nbsp;the&nbsp;<a href="#Posting">Posting</a>&nbsp;model&nbsp;object.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="threetaps.api.models.posting.html#Posting">Posting</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Posting">class <strong>Posting</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>The&nbsp;<a href="#Posting">Posting</a>&nbsp;class&nbsp;represents&nbsp;a&nbsp;posting&nbsp;within&nbsp;the&nbsp;3taps&nbsp;client&nbsp;APIs.<br>
+&nbsp;<br>
+A&nbsp;<a href="#Posting">Posting</a>&nbsp;object&nbsp;has&nbsp;the&nbsp;following&nbsp;attributes:<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;postKey<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;uniqely&nbsp;identifying&nbsp;this&nbsp;posting&nbsp;in&nbsp;the&nbsp;3taps&nbsp;system.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;location<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;code&nbsp;for&nbsp;the&nbsp;location&nbsp;to&nbsp;be&nbsp;associated&nbsp;with&nbsp;this&nbsp;posting,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;category<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;code&nbsp;for&nbsp;the&nbsp;category&nbsp;to&nbsp;be&nbsp;associated&nbsp;with&nbsp;this&nbsp;posting,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;source<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;code&nbsp;for&nbsp;the&nbsp;data&nbsp;source&nbsp;to&nbsp;be&nbsp;associated&nbsp;with&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posting,&nbsp;as&nbsp;a&nbsp;string.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;heading<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;representing&nbsp;a&nbsp;brief&nbsp;summary&nbsp;of&nbsp;the&nbsp;posting,&nbsp;up&nbsp;to&nbsp;255<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;characters&nbsp;long.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;body<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;full&nbsp;text&nbsp;of&nbsp;the&nbsp;posting,&nbsp;up&nbsp;to&nbsp;5,000<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;character&nbsp;long.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;latitude<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;latitude&nbsp;value&nbsp;associated&nbsp;with&nbsp;this&nbsp;posting,&nbsp;if&nbsp;any.&nbsp;&nbsp;If<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;is&nbsp;given,&nbsp;it&nbsp;will&nbsp;be&nbsp;a&nbsp;floating-point&nbsp;number&nbsp;representing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;posting's&nbsp;latitude&nbsp;in&nbsp;decimal&nbsp;degrees.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;longitude<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;longitude&nbsp;value&nbsp;associated&nbsp;with&nbsp;this&nbsp;posting,&nbsp;if&nbsp;any.&nbsp;&nbsp;If<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this&nbsp;is&nbsp;given,&nbsp;it&nbsp;will&nbsp;be&nbsp;a&nbsp;floating-point&nbsp;number&nbsp;representing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;posting's&nbsp;longitude&nbsp;in&nbsp;decimal&nbsp;degrees.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;language<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;two-character&nbsp;code&nbsp;identifying&nbsp;the&nbsp;language&nbsp;of&nbsp;the&nbsp;posting.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;value&nbsp;used&nbsp;here&nbsp;should&nbsp;be&nbsp;a&nbsp;valid&nbsp;ISO&nbsp;6943-1&nbsp;language&nbsp;code.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;price<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;price&nbsp;to&nbsp;associate&nbsp;with&nbsp;this&nbsp;posting,&nbsp;as&nbsp;a&nbsp;floating-point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;currency<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;three-character&nbsp;code&nbsp;identifying&nbsp;which&nbsp;currency&nbsp;the&nbsp;price&nbsp;is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in.&nbsp;&nbsp;If&nbsp;supplied,&nbsp;this&nbsp;must&nbsp;match&nbsp;one&nbsp;of&nbsp;the&nbsp;valid&nbsp;ISO&nbsp;4217<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currency&nbsp;codes.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;images<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;images&nbsp;to&nbsp;be&nbsp;associated&nbsp;with&nbsp;this&nbsp;posting.&nbsp;&nbsp;Each&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item&nbsp;will&nbsp;be&nbsp;the&nbsp;URL&nbsp;of&nbsp;the&nbsp;image&nbsp;to&nbsp;display.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;externalID<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;additional&nbsp;information&nbsp;that&nbsp;identifies&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posting&nbsp;in&nbsp;some&nbsp;external&nbsp;system.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;externalURL<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;string&nbsp;containing&nbsp;the&nbsp;URL&nbsp;that&nbsp;refers&nbsp;to&nbsp;this&nbsp;posting&nbsp;in&nbsp;some<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external&nbsp;system.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;accountName<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;author&nbsp;of&nbsp;this&nbsp;posting&nbsp;in&nbsp;the&nbsp;originating<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;system,&nbsp;if&nbsp;known.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;accountID<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;ID&nbsp;of&nbsp;the&nbsp;author&nbsp;in&nbsp;the&nbsp;originating&nbsp;system,&nbsp;as&nbsp;a&nbsp;string.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note&nbsp;that&nbsp;in&nbsp;many&nbsp;cases&nbsp;the&nbsp;account&nbsp;name&nbsp;and&nbsp;the&nbsp;account&nbsp;ID<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will&nbsp;be&nbsp;the&nbsp;same.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;timestamp<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;datetime.datetime&nbsp;object&nbsp;representing&nbsp;the&nbsp;date&nbsp;and&nbsp;time&nbsp;at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which&nbsp;this&nbsp;posting&nbsp;was&nbsp;made.&nbsp;&nbsp;Note&nbsp;that&nbsp;the&nbsp;date&nbsp;and&nbsp;time&nbsp;will<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be&nbsp;in&nbsp;UTC.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;expiration<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;datetime.datetime&nbsp;object&nbsp;representing&nbsp;the&nbsp;date&nbsp;and&nbsp;time&nbsp;at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which&nbsp;this&nbsp;posting&nbsp;will&nbsp;expire,&nbsp;if&nbsp;specified.&nbsp;&nbsp;Note&nbsp;that&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date&nbsp;and&nbsp;time&nbsp;will&nbsp;be&nbsp;in&nbsp;UTC.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;annotations<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;mapping&nbsp;annotation&nbsp;names&nbsp;to&nbsp;values&nbsp;for&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posting's&nbsp;untrusted&nbsp;annotations.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;trustedAnnotations<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;mapping&nbsp;annotation&nbsp;names&nbsp;to&nbsp;values&nbsp;for&nbsp;this<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posting's&nbsp;trusted&nbsp;annotations.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;clickCount<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;number&nbsp;of&nbsp;times&nbsp;this&nbsp;posting&nbsp;has&nbsp;been&nbsp;clicked&nbsp;on&nbsp;in&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3taps&nbsp;system.<br>
+&nbsp;<br>
+You&nbsp;can&nbsp;retrieve&nbsp;and&nbsp;change&nbsp;these&nbsp;attributes&nbsp;directly&nbsp;as&nbsp;required.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Posting-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><tt>Standard&nbsp;initializer.<br>
+&nbsp;<br>
+The&nbsp;initial&nbsp;attributes&nbsp;for&nbsp;the&nbsp;<a href="#Posting">Posting</a>&nbsp;object&nbsp;can&nbsp;be&nbsp;passed&nbsp;as<br>
+keyword&nbsp;arguments&nbsp;if&nbsp;desired.</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
