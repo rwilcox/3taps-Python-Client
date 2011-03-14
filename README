@@ -1,0 +1,71 @@
+About the 3taps Python API Wrappers
+-----------------------------------
+
+The 3taps Python API wrappers make it easy to access the 3taps API via Python.
+Everything you need can be found in the "threetaps" package; simply include
+this package, either directly into your source tree or place it somewhere on
+your Python path.  You can then import the relevant parts of the package like
+this:
+
+    import threetaps.api.base
+    import threetaps.api.clients
+    import threetaps.api.models
+
+
+Pre-Requisites
+--------------
+
+The threetaps API wrapper library requires the "simplejson" JSON parsing
+library written by Bob Ippolito.  If you are using Python 2.6 or greater, you
+can comment out the "import simplejson as json" lines at the start of the
+source files, as simplejson has been made available as a Python standard
+library module starting with Python version 2.6.
+
+Simplejson can be found at:
+
+    http://pypi.python.org/pypi/simplejson
+
+
+Documentation
+-------------
+
+Full API documentation for the threetaps package can be found in the "docs"
+directory.  The documentation is in HTML format; simply open the "index.html"
+file in your web browser, and you can drill down to see the API documentation
+for the various parts of the threetaps library.
+
+If for whatever reason you need to regenerate the documentation, you can do
+this by executing the following from the command line:
+
+    python generateDocs.py
+
+This will automatically create the documentation out of the embedded docstrings
+in the python source files.
+
+
+Unit Testing
+------------
+
+A complete set of unit tests have been provided, in the "tests" sub-directory.
+To run through all the unit tests, you can use the "runTests.py" script:
+
+    python runTests.py
+
+
+License
+-------
+
+The threetaps Python library and related files, including the unit tests and
+the documentation files, are all copyright (c) 2011 3taps inc. 
+
+This software is licensed under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance with the License.
+You may obtain a copy of the License at 
+
+  http://www.apache.org/licenses/LICENSE-2.0 
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations under the License.
+

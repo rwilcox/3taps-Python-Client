@@ -2,7 +2,8 @@
 
     This Python module implements the 3taps Posting API client object.
 """
-from threetaps.api.base import APIClient
+from threetaps.api.base   import APIClient
+from threetaps.api.models import Posting
 
 import simplejson as json
 
@@ -11,10 +12,52 @@ import simplejson as json
 class PostingAPIClient(APIClient):
     """ A client for the 3taps Posting API.
     """
+    def get(self, postKey):
+        """ Retrieve a posting with the given postKey.
+
+            'postKey' should be the posting key for a desired posting.
+
+            We attempt to retrieve the given posting from the 3taps system.
+            Upon completion, we return a dictionary with the following entries:
+
+                'success'
+
+                    If the posting was found, this will be set to True.
+
+                'posting'
+
+                    The Posting object which was retrieved (success=True).
+
+                'error'
+
+                    If a problem occurred (success=False), this will be a
+                    dictionary with 'code' and 'message' entries describing the
+                    error that occurred.
+
+            Note that if the 3taps server cannot be contacted for some reason,
+            we return None.
+        """
+        response = self.sendRequest("posting/get/" + postKey)
+
+        if (response == None) or (response['status'] != 200):
+            return None # An error occurred.
+
+        results = json.loads(response['contents'])
+        if "code" in results and "message" in results:
+            # We received an error object rather than the desired posting ->
+            # the posting doesn't exist.
+            return {'success' : False,
+                    'error'   : {'code'    : int(results['code']),
+                                 'message' : results['message']}}
+
+        return {'success' : True,
+                'posting' : Posting(**results)}
+
+
     def create(self, posting):
         """ Create a new posting in the 3taps system.
 
-            'postins' should be a Posting object representing the posting to
+            'posting' should be a Posting object representing the posting to
             create.  Note that the posting should not include a 'postKey'
             entry, as this will be allocated by the 3taps system.
 

@@ -121,7 +121,7 @@ class SearchAPIClient(APIClient):
 
 
     def range(self, query, fields):
-        """ Calculate the minimum and maximum field values for a search.
+        """ Calculate the minimum and maximum values for a given search query.
 
             The parameters are as follows:
 
@@ -302,7 +302,7 @@ class SearchQuery:
 
             source
 
-                The 5-characgter source code a posting must have if it is to be
+                The 5-character source code a posting must have if it is to be
                 included in the list of search results.
 
             category
@@ -337,7 +337,7 @@ class SearchQuery:
 
             externalID
 
-                A string which must match the "externalID" field for a postig
+                A string which must match the "externalID" field for a posting
                 if it is to be included in the list of search results.
 
             start

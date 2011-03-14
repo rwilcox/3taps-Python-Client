@@ -36,8 +36,7 @@ class PostingAPIClientTestCase(unittest.TestCase):
 
 
     def testSingle(self):
-        """ Test the PostingClient.create(), update() and delete() API calls
-
+        """ Test the PostingClient.create, update, get and delete API calls.
         """
         # Create a new posting.
 
@@ -64,6 +63,21 @@ class PostingAPIClientTestCase(unittest.TestCase):
         success = self._api.update(update)
 
         assert success == True
+
+        # Retrieve the posting.
+
+        results = self._api.get(postKey)
+
+        assert results != None
+        assert "success" in results
+        if results['success']:
+            assert "posting" in results
+            #print repr(results['posting'])
+        else:
+            assert "error" in results
+            #print "Unable to get posting: %d %s" \
+            #    % (results['error']['code'], results['error']['message'])
+            #print "(this is expected for newly-added postings)"
 
         # Delete the posting.
 
